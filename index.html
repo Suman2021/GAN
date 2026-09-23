@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Metadata -->
+  <title>GAN Lab | Graph, Algorithm, and Network Lab | IIT Jammu</title>
+  <meta name="description" content="Official website of GAN Lab (Graph, Algorithm, and Network Lab, Room 4011) led by Dr. Suman Banerjee at the Department of Computer Science and Engineering, IIT Jammu. Research in data management, graph theory, algorithms, optimization, reinforcement learning, and game theory.">
+  <meta name="keywords" content="GAN Lab, Graph Algorithm and Network Lab, IIT Jammu, Dr. Suman Banerjee, Lab 4011, Computer Science, Algorithms, Graph Theory, Social Networks, Submodular Optimization, Reinforcement Learning, Game Theory, AAAI">
+  <meta name="author" content="GAN Lab - Dr. Suman Banerjee Research Group">
+
+  <!-- OpenGraph Social Sharing -->
+  <meta property="og:title" content="GAN Lab | Graph, Algorithm, and Network Lab | IIT Jammu">
+  <meta property="og:description" content="Research group led by Dr. Suman Banerjee in the Department of Computer Science & Engineering, IIT Jammu.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/gan-logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/gan-logo.png">
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       NAVIGATION BAR
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#hero" class="nav-brand" aria-label="GAN Lab Home">
+        <img src="assets/images/gan-logo.png" alt="GAN Lab Logo" class="nav-brand-emblem">
+        <div class="nav-brand-text">
+          <span class="nav-brand-title">GAN <span>LAB</span></span>
+          <span class="nav-brand-sub">Graph, Algorithm &amp; Network • IIT Jammu</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" class="nav-link">About GAN Lab</a></li>
+          <li><a href="#research" class="nav-link">Research</a></li>
+          <li><a href="#pi" class="nav-link">Faculty / PI</a></li>
+          <li><a href="#team" class="nav-link">Team Members</a></li>
+          <li><a href="#publications" class="nav-link">Publications</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#join" class="nav-link">Join Us</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Theme Switcher & Mobile Hamburger) -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <section class="hero" id="hero">
+    <canvas id="hero-network-canvas" class="hero-canvas"></canvas>
+    
+    <div class="container hero-content">
+      <div class="hero-affiliation-badge">
+        <span class="badge-dot"></span>
+        <span>Graph, Algorithm, and Network Lab • Room 4011 • Department of CSE, IIT Jammu</span>
+      </div>
+
+      <h1 class="hero-title">
+        Graph, Algorithm &amp; Network <span class="gradient-text">Laboratory</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Welcome to the <strong>Graph, Algorithm, and Network (GAN) Lab</strong> at the Indian Institute of Technology Jammu, led by <strong>Dr. Suman Banerjee</strong>. We are a dedicated group of faculty, postdocs, doctoral, graduate, and undergraduate scholars solving foundational and applied challenges across graph theory, algorithmic optimization, reinforcement learning, database indexing, and multi-agent game theory.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#team" class="btn btn-primary">
+          <i class="fa-solid fa-users"></i> Meet Our Researchers
+        </a>
+        <a href="#about" class="btn btn-outline">
+          <i class="fa-solid fa-circle-info"></i> About GAN Lab
+        </a>
+        <a href="#research" class="btn btn-outline">
+          <i class="fa-solid fa-microchip"></i> Research Areas
+        </a>
+        <a href="#publications" class="btn btn-outline">
+          <i class="fa-solid fa-book-open"></i> Publications
+        </a>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">60+</span>
+          <span class="stat-label">Research Articles</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">10</span>
+          <span class="stat-label">Dedicated Scholars</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">GAN Lab</span>
+          <span class="stat-label">Room 4011 HQ</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">Top-Tier</span>
+          <span class="stat-label">AAAI, DEXA, TCS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT SECTION (From About Lab.docx and GAN Logo.png)
+       ========================================================================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fa-solid fa-circle-nodes"></i> About GAN Lab
+        </div>
+        <h2 class="section-title">Graph, Algorithm, and Network Lab</h2>
+        <p class="section-desc">
+          Fostering academic excellence, theoretical rigor, and community outreach in Computer Science &amp; Mathematics at IIT Jammu.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        
+        <!-- Left Column: Official GAN Emblem & Community Outreach -->
+        <div class="about-emblem-showcase">
+          <div class="about-emblem-frame">
+            <img src="assets/images/gan-logo.png" alt="GAN Lab Emblem - Graph, Algorithm and Network Lab" class="about-emblem-img">
+          </div>
+
+          <!-- Outreach Highlight Card from About Lab.docx -->
+          <div class="outreach-box">
+            <div class="outreach-badge">
+              <i class="fa-solid fa-bullhorn"></i> Outreach &amp; Collaboration
+            </div>
+            <p>
+              We regularly conduct outreach activities to engage the broader community and inspire interest in theoretical computer science, as we believe in fostering collaboration and knowledge-sharing, not just within academia but also with students and enthusiasts from diverse backgrounds.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Column: Welcome, Core Research Areas & Department Guidance -->
+        <div class="about-card">
+          <h3 class="about-card-title">
+            <i class="fa-solid fa-compass"></i> Welcome to GAN Lab
+          </h3>
+          <p>
+            Welcome to the homepage of the <strong>Graph, Algorithm, and Network Lab</strong> at the Department of Computer Science and Engineering, Indian Institute of Technology Jammu, India. We are a group of faculty, postdocs, doctoral, graduate, and undergraduate students in the CSE Department at IIT Jammu.
+          </p>
+          <p>
+            Our research group works in diverse areas, including <strong>Data Management</strong>, <strong>Graph Theory</strong>, <strong>Algorithms</strong>, <strong>Optimization</strong>, <strong>Reinforcement Learning</strong>, and <strong>Game Theory</strong>. If computer science and mathematics make you feel excited, do consider joining us!
+          </p>
+
+          <!-- Core Areas Tag Pills from About Lab.docx -->
+          <div class="areas-pills-wrap">
+            <div class="areas-pills-title">Core Research Focus Areas</div>
+            <div class="areas-pills">
+              <span class="area-pill"><i class="fa-solid fa-database"></i> Data Management</span>
+              <span class="area-pill"><i class="fa-solid fa-diagram-project"></i> Graph Theory</span>
+              <span class="area-pill"><i class="fa-solid fa-code"></i> Algorithms</span>
+              <span class="area-pill"><i class="fa-solid fa-bullseye"></i> Optimization</span>
+              <span class="area-pill"><i class="fa-solid fa-brain"></i> Reinforcement Learning</span>
+              <span class="area-pill"><i class="fa-solid fa-chess"></i> Game Theory</span>
+            </div>
+          </div>
+
+          <!-- Department Joining Note from About Lab.docx -->
+          <div class="dept-join-card">
+            <div class="dept-join-text">
+              <i class="fa-solid fa-circle-info" style="color: var(--accent); margin-right: 0.35rem;"></i>
+              Please refer to the department webpage for information regarding joining (the CSE department) as a <strong>graduate student</strong>, <strong>doctoral scholar</strong>, <strong>postdoc</strong>, <strong>young international faculty member</strong>, or <strong>regular faculty member</strong>.
+            </div>
+            <a href="https://iitjammu.ac.in/computer-science-and-engineering" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.8rem; padding: 0.5rem 1rem; white-space: nowrap;">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> CSE Portal
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RESEARCH FOCUS AREAS
+       ========================================================================= -->
+  <section class="section" id="research" style="background: var(--bg-surface-elevated);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fa-solid fa-atom"></i> Research Themes
+        </div>
+        <h2 class="section-title">Core Thrusts &amp; Focus Domains</h2>
+        <p class="section-desc">
+          Our members work at the intersection of mathematical theory, computational complexity, artificial intelligence, and applied distributed systems.
+        </p>
+      </div>
+
+      <div class="research-grid">
+        <!-- Thrust 1: Graph Theory & Algorithms -->
+        <div class="research-card">
+          <div class="research-icon-wrapper">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h3 class="research-title">Graph Theory &amp; Theoretical Computer Science</h3>
+          <p class="research-desc">
+            Graph isomorphism, finding copies of subgraphs in undirected signed graphs with output-sensitive guarantees, mediation in signed graphs with neutral edges, and parameterized complexity.
+          </p>
+          <div class="research-tags">
+            <span class="tag-badge">Signed Graphs</span>
+            <span class="tag-badge">Neutral Edges</span>
+            <span class="tag-badge">Parameterized Complexity</span>
+            <span class="tag-badge">Graph Theory</span>
+          </div>
+        </div>
+
+        <!-- Thrust 2: Optimization & Regret Minimization -->
+        <div class="research-card">
+          <div class="research-icon-wrapper">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <h3 class="research-title">Combinatorial Optimization &amp; Regret Minimization</h3>
+          <p class="research-desc">
+            Algorithmic frameworks for billboard advertising, regret-aware slot allocations, submodular function maximization, and automated decision-making under fairness constraints.
+          </p>
+          <div class="research-tags">
+            <span class="tag-badge">Submodular Functions</span>
+            <span class="tag-badge">Regret Minimization</span>
+            <span class="tag-badge">Billboard Advertising</span>
+            <span class="tag-badge">Optimization</span>
+          </div>
+        </div>
+
+        <!-- Thrust 3: Game Theory & Multi-Agent Systems -->
+        <div class="research-card">
+          <div class="research-icon-wrapper">
+            <i class="fa-solid fa-chess"></i>
+          </div>
+          <h3 class="research-title">Game Theory &amp; Multi-Agent Systems</h3>
+          <p class="research-desc">
+            Designing scalable, fair, and efficient algorithms for strategic decision-making in multi-agent environments, competitive game dynamics, and cooperative resource sharing.
+          </p>
+          <div class="research-tags">
+            <span class="tag-badge">Game Theory</span>
+            <span class="tag-badge">Multi-Agent Systems</span>
+            <span class="tag-badge">Fairness</span>
+            <span class="tag-badge">Strategic Decisions</span>
+          </div>
+        </div>
+
+        <!-- Thrust 4: Data Management & Learned Indexes -->
+        <div class="research-card">
+          <div class="research-icon-wrapper">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <h3 class="research-title">Data Management &amp; Learned Index Structures</h3>
+          <p class="research-desc">
+            Modern database systems integrated with machine learning models. Designing learned index structures to enhance efficiency, query processing speed, and scalability of multi-dimensional indexing.
+          </p>
+          <div class="research-tags">
+            <span class="tag-badge">Learned Indexes</span>
+            <span class="tag-badge">Data Management</span>
+            <span class="tag-badge">Query Processing</span>
+            <span class="tag-badge">ML for Databases</span>
+          </div>
+        </div>
+
+        <!-- Thrust 5: Reinforcement Learning & Social Networks -->
+        <div class="research-card">
+          <div class="research-icon-wrapper">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3 class="research-title">Reinforcement Learning &amp; Social Network Mining</h3>
+          <p class="research-desc">
+            Understanding and optimizing complex networked systems at the intersection of mathematics, computation, and human behaviour using reinforcement learning and data analytics.
+          </p>
+          <div class="research-tags">
+            <span class="tag-badge">Reinforcement Learning</span>
+            <span class="tag-badge">Social Networks</span>
+            <span class="tag-badge">Data Analytics</span>
+            <span class="tag-badge">Network Dynamics</span>
+          </div>
+        </div>
+
+        <!-- Thrust 6: Cloud Scheduling & Systems Optimization -->
+        <div class="research-card">
+          <div class="research-icon-wrapper">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <h3 class="research-title">Cloud Workflow Scheduling &amp; Security</h3>
+          <p class="research-desc">
+            Resource-aware schedulers that minimize computational costs and latency while reinforcing security in single and multi-cloud environments under budget, deadline, and confidentiality constraints (ISEA Project).
+          </p>
+          <div class="research-tags">
+            <span class="tag-badge">Multi-Cloud</span>
+            <span class="tag-badge">Workflow Scheduling</span>
+            <span class="tag-badge">ISEA Project</span>
+            <span class="tag-badge">Cloud Security</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRINCIPAL INVESTIGATOR SPOTLIGHT
+       ========================================================================= -->
+  <section class="section pi-section" id="pi">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fa-solid fa-chalkboard-user"></i> Leadership
+        </div>
+        <h2 class="section-title">Principal Investigator &amp; Lab In-Charge</h2>
+      </div>
+
+      <div class="pi-card">
+        <!-- Photo Column -->
+        <div class="pi-photo-column">
+          <div class="pi-photo-wrapper">
+            <img src="assets/images/members/DrSumanBanerjee.jpg" alt="Dr. Suman Banerjee" loading="lazy">
+          </div>
+          <span class="pi-badge">Lab Director &amp; In-Charge</span>
+        </div>
+
+        <!-- Info Column -->
+        <div class="pi-info-column">
+          <h3 class="pi-name">Dr. Suman Banerjee</h3>
+          <div class="pi-role">Assistant Professor, Department of Computer Science and Engineering</div>
+          <div class="pi-inst">
+            <i class="fa-solid fa-building-columns"></i> Indian Institute of Technology Jammu, India
+          </div>
+
+          <p class="pi-bio-text">
+            Dr. Suman Banerjee received his Ph.D. in Computer Science and Engineering from the <strong>Indian Institute of Technology Kharagpur</strong> and subsequently worked as a Postdoctoral Fellow at the <strong>Indian Institute of Technology Gandhinagar</strong>. His research interests span social network analysis, data management and mining, graph theory and algorithms, and parameterized complexity, with recent work focusing on fairness issues in automated decision-making systems.
+          </p>
+          <p class="pi-bio-text">
+            Dr. Banerjee has authored over <strong>60 research articles</strong> in premier international journals and conferences, including DEXA, ADMA, WISE, WALCOM, Theoretical Computer Science, and Theory of Computing Systems. He frequently serves as a reviewer and program committee member for prominent international conferences and journals and leads sponsored research projects on efficient algorithms for advertising slot allocation and network optimization.
+          </p>
+
+          <!-- Key Credentials -->
+          <div class="pi-meta-grid">
+            <div class="meta-item">
+              <span class="meta-label">Doctorate (Ph.D.)</span>
+              <span class="meta-value">IIT Kharagpur (CSE)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Postdoctoral Fellowship</span>
+              <span class="meta-value">IIT Gandhinagar (CSE)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Research Articles</span>
+              <span class="meta-value">60+ Published Articles</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Laboratory HQ</span>
+              <span class="meta-value">GAN Lab (Room 4011), IIT Jammu</span>
+            </div>
+          </div>
+
+          <!-- Direct Links -->
+          <div class="pi-actions">
+            <a href="mailto:suman.banerjee@iitjammu.ac.in" class="social-btn email-btn">
+              <i class="fa-solid fa-envelope"></i> suman.banerjee@iitjammu.ac.in
+            </a>
+            <a href="https://scholar.google.com/citations?user=mUpLGpsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="social-btn">
+              <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+            </a>
+            <a href="https://www.linkedin.com/in/suman-banerjee-ba17b760/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" class="social-btn">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://iitjammu.ac.in/faculty/~sumanbanerjee" target="_blank" rel="noopener noreferrer" class="social-btn">
+              <i class="fa-solid fa-university"></i> IIT Jammu Faculty Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       LAB MEMBERS & RESEARCHERS (PORTFOLIO SHOWCASE)
+       ========================================================================= -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fa-solid fa-people-group"></i> People
+        </div>
+        <h2 class="section-title">Meet Our Research Team</h2>
+        <p class="section-desc">
+          The bright minds driving theoretical discoveries, intelligent algorithm designs, and experimental breakthroughs in GAN Lab.
+        </p>
+      </div>
+
+      <!-- Controls: Search & Category Filters -->
+      <div class="team-controls">
+        <div class="team-search-bar">
+          <i class="fa-solid fa-magnifying-glass team-search-icon"></i>
+          <input type="text" id="member-search" class="team-search-input" placeholder="Search members by name, topic, or keyword (e.g. cloud, graph, index)..." aria-label="Search members">
+        </div>
+
+        <div class="team-filters" role="tablist">
+          <button class="filter-btn active" data-filter="all">All Members <span class="filter-count">(10)</span></button>
+          <button class="filter-btn" data-filter="pi">Lab In-Charge <span class="filter-count">(1)</span></button>
+          <button class="filter-btn" data-filter="postdoc">Postdoc &amp; Alumni <span class="filter-count">(1)</span></button>
+          <button class="filter-btn" data-filter="phd">Ph.D. Scholars <span class="filter-count">(4)</span></button>
+          <button class="filter-btn" data-filter="grad">Grad &amp; Undergrad <span class="filter-count">(4)</span></button>
+        </div>
+      </div>
+
+      <!-- Team Cards Grid -->
+      <div class="team-grid" id="team-grid">
+
+        <!-- Member 1: Dr. Suman Banerjee -->
+        <article class="member-card" data-category="pi" data-name="Dr. Suman Banerjee" data-role="Assistant Professor & Lab In-Charge" data-tags="social network analysis data management mining graph theory algorithms parameterized complexity fairness" data-email="suman.banerjee@iitjammu.ac.in" data-scholar="https://scholar.google.com/citations?user=mUpLGpsAAAAJ&hl=en" data-linkedin="https://www.linkedin.com/in/suman-banerjee-ba17b760/?originalSubdomain=in" data-full-bio="Dr. Suman Banerjee is an Assistant Professor in the Department of Computer Science and Engineering at the Indian Institute of Technology Jammu, India. He received his Ph.D. in Computer Science and Engineering from the Indian Institute of Technology Kharagpur and subsequently worked as a Postdoctoral Fellow at the Indian Institute of Technology Gandhinagar.
+
+His research interests include social network analysis, data management and mining, graph theory and algorithms, and parameterized complexity, with recent interests in fairness issues in automated decision-making systems.
+
+Dr. Banerjee has published more than 60 research articles in reputed international journals and conferences, including venues such as DEXA, ADMA, WISE, WALCOM, Theoretical Computer Science, and Theory of Computing Systems. He has also served as a reviewer and program committee member for several international conferences and journals and is currently involved in research projects related to the development of efficient algorithms for practical applications such as advertisement slot allocation.">
+          <div class="member-card-header">
+            <div class="member-avatar-wrapper">
+              <img src="assets/images/members/DrSumanBanerjee.jpg" alt="Dr. Suman Banerjee" class="member-avatar" loading="lazy">
+            </div>
+            <div class="member-header-info">
+              <h3 class="member-name">Dr. Suman Banerjee</h3>
+              <span class="member-role-badge">Assistant Professor &amp; Lab In-Charge</span>
+              <div class="member-affil"><i class="fa-solid fa-graduation-cap"></i> Ph.D., IIT Kharagpur</div>
+            </div>
+          </div>
+          <div class="member-card-body">
+            <div class="member-interests-heading">Research Highlights</div>
+            <div class="member-tags">
+              <span class="member-tag">Graph Algorithms</span>
+              <span class="member-tag">Social Networks</span>
+              <span class="member-tag">Fairness</span>
+              <span class="member-tag">Optimization</span>
+            </div>
+            <p class="member-bio-preview">
+              Assistant Professor at IIT Jammu. Ph.D. from IIT Kharagpur, Postdoc at IIT Gandhinagar. Focuses on social network analysis, graph algorithms, parameterized complexity, and fairness in decision-making. Over 60 published research articles.
+            </p>
+          </div>
+          <div class="member-card-footer">
+            <div class="member-social-links">
+              <a href="mailto:suman.banerjee@iitjammu.ac.in" class="member-social-icon" title="Email" aria-label="Email Dr. Suman Banerjee"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://scholar.google.com/citations?user=mUpLGpsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="member-social-icon" title="Google Scholar" aria-label="Dr. Suman Banerjee on Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+              <a href="https://www.linkedin.com/in/suman-banerjee-ba17b760/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" class="member-social-icon" title="LinkedIn" aria-label="Dr. Suman Banerjee on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <button class="btn-view-bio">Full Bio <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Member 2: Dr. Dildar Ali -->
+        <article class="member-card" data-category="postdoc" data-name="Dr. Dildar Ali" data-role="Postdoctoral Fellow (NTHU, Taiwan) & Alumnus" data-tags="submodular functions combinatorial optimization algorithmic data management multi-agent systems" data-email="dildar.ali@iitjammu.ac.in" data-scholar="https://scholar.google.co.in/citations?user=zvkUg_4AAAAJ&hl=en" data-linkedin="https://www.linkedin.com/in/dildar-ali-622755239/" data-webpage="https://dildariitjammu.github.io/" data-full-bio="Dr. Dildar Ali is currently a Postdoctoral Fellow at the National Tsing Hua University, Taiwan. He received his Ph.D. in Computer Science from the Indian Institute of Technology Jammu, India. Prior to this, he worked as a Project Associate at the Indian Institute of Technology Bhilai, India.
+
+He obtained both his Bachelor's and Master's degree in Computer Science from Aliah University, Kolkata, India.
+
+His research interests include Submodular Functions, Combinatorial Optimization, Algorithmic Data Management, and Multi-Agent Systems.">
+          <div class="member-card-header">
+            <div class="member-avatar-wrapper">
+              <img src="assets/images/members/DildarAli.jpg" alt="Dr. Dildar Ali" class="member-avatar" loading="lazy">
+            </div>
+            <div class="member-header-info">
+              <h3 class="member-name">Dr. Dildar Ali</h3>
+              <span class="member-role-badge">Postdoctoral Fellow &amp; Alumnus</span>
+              <div class="member-affil"><i class="fa-solid fa-building-columns"></i> NTHU Taiwan • Ph.D. IIT Jammu</div>
+            </div>
+          </div>
+          <div class="member-card-body">
+            <div class="member-interests-heading">Research Highlights</div>
+            <div class="member-tags">
+              <span class="member-tag">Submodular Functions</span>
+              <span class="member-tag">Combinatorial Opt.</span>
+              <span class="member-tag">Multi-Agent Systems</span>
+            </div>
+            <p class="member-bio-preview">
+              Postdoctoral Fellow at National Tsing Hua University (NTHU), Taiwan. Received Ph.D. from IIT Jammu. Specializes in submodular functions, combinatorial optimization, and algorithmic data management.
+            </p>
+          </div>
+          <div class="member-card-footer">
+            <div class="member-social-links">
+              <a href="mailto:dildar.ali@iitjammu.ac.in" class="member-social-icon" title="Email" aria-label="Email Dr. Dildar Ali"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://scholar.google.co.in/citations?user=zvkUg_4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="member-social-icon" title="Google Scholar" aria-label="Dr. Dildar Ali on Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+              <a href="https://www.linkedin.com/in/dildar-ali-622755239/" target="_blank" rel="noopener noreferrer" class="member-social-icon" title="LinkedIn" aria-label="Dr. Dildar Ali on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://dildariitjammu.github.io/" target="_blank" rel="noopener noreferrer" class="member-social-icon" title="Website" aria-label="Dr. Dildar Ali Website"><i class="fa-solid fa-globe"></i></a>
+            </div>
+            <button class="btn-view-bio">Full Bio <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Member 3: Ms. Poonam Sharma -->
+        <article class="member-card" data-category="phd" data-name="Ms. Poonam Sharma" data-role="Ph.D. Scholar (CSE)" data-tags="social network analysis data analytics reinforcement learning algorithm development complex networked systems" data-email="poonam.sharma@iitjammu.ac.in" data-scholar="https://scholar.google.com/citations?user=bH88Sx4AAAAJ&hl=en&authuser=1" data-linkedin="https://www.linkedin.com/in/poonam-sharma-38210315/" data-full-bio="Poonam Sharma completed her B.Tech in 2011 and M.Tech in 2014 in Computer Science and Engineering from Guru Gobind Singh Indraprastha University, Dwarka, Delhi. She has 6.5 years of teaching experience in computer science, during which she has actively guided undergraduate students and contributed to academic development.
+
+She qualified the GATE examination in 2012 and cleared the UGC-NET examination in both July and December 2018 for the position of Assistant Professor.
+
+She is currently pursuing her Ph.D. in Computer Science and Engineering at the Indian Institute of Technology Jammu. Her research interests include social network analysis and mining, data analytics, reinforcement learning, and algorithm development, with a focus on understanding and optimizing complex networked systems at the intersection of mathematics, computation, and human behaviour. She believes in the life philosophy of 'live and let live.'">
+          <div class="member-card-header">
+            <div class="member-avatar-wrapper">
+              <img src="assets/images/members/PoonamSharma.jpg" alt="Ms. Poonam Sharma" class="member-avatar" loading="lazy">
+            </div>
+            <div class="member-header-info">
+              <h3 class="member-name">Ms. Poonam Sharma</h3>
+              <span class="member-role-badge">Ph.D. Scholar (CSE)</span>
+              <div class="member-affil"><i class="fa-solid fa-award"></i> GATE &amp; UGC-NET Qualified</div>
+            </div>
+          </div>
+          <div class="member-card-body">
+            <div class="member-interests-heading">Research Highlights</div>
+            <div class="member-tags">
+              <span class="member-tag">Social Network Mining</span>
+              <span class="member-tag">Data Analytics</span>
+              <span class="member-tag">Reinforcement Learning</span>
+            </div>
+            <p class="member-bio-preview">
+              Pursuing Ph.D. in CSE at IIT Jammu with 6.5 years of teaching experience. Investigating complex networked systems at the intersection of mathematics, computation, and human behavior.
+            </p>
+          </div>
+          <div class="member-card-footer">
+            <div class="member-social-links">
+              <a href="mailto:poonam.sharma@iitjammu.ac.in" class="member-social-icon" title="Email" aria-label="Email Poonam Sharma"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://scholar.google.com/citations?user=bH88Sx4AAAAJ&hl=en&authuser=1" target="_blank" rel="noopener noreferrer" class="member-social-icon" title="Google Scholar" aria-label="Poonam Sharma on Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+              <a href="https://www.linkedin.com/in/poonam-sharma-38210315/" target="_blank" rel="noopener noreferrer" class="member-social-icon" title="LinkedIn" aria-label="Poonam Sharma on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <button class="btn-view-bio">Full Bio <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Member 4: Mr. Alex Joseph -->
+        <article class="member-card" data-category="phd" data-name="Mr. Alex Joseph" data-role="Ph.D. Scholar (CSE)" data-tags="workflow scheduling execution optimization single multi-cloud cloud computing ieee" data-email="alex.joseph@iitjammu.ac.in" data-linkedin="https://www.linkedin.com/in/alex-joseph-kdmr" data-full-bio="Alex Joseph received his M.Tech degree in Computer and Information Science from Cochin University of Science And Technology (CUSAT), Kerala, India in 2014. His B.Tech degree in Computer Science and Engineering was also from CUSAT in 2011.
+
+Currently, he is working towards the PhD degree in the Department of Computer Science and Engineering at Indian Institute of Technology, Jammu, J&K, India.
+
+His research interests include workflow scheduling, execution and optimization in Single/Multi-Cloud environments. He is a student member of the IEEE.">
+          <div class="member-card-header">
+            <div class="member-avatar-wrapper">
+              <img src="assets/images/members/AlexJoseph.jpg" alt="Mr. Alex Joseph" class="member-avatar" loading="lazy">
+            </div>
+            <div class="member-header-info">
+              <h3 class="member-name">Mr. Alex Joseph</h3>
+              <span class="member-role-badge">Ph.D. Scholar (CSE)</span>
+              <div class="member-affil"><i class="fa-solid fa-certificate"></i> IEEE Student Member</div>
+            </div>
+          </div>
+          <div class="member-card-body">
+            <div class="member-interests-heading">Research Highlights</div>
+            <div class="member-tags">
+              <span class="member-tag">Workflow Scheduling</span>
+              <span class="member-tag">Multi-Cloud</span>
+              <span class="member-tag">Cloud Optimization</span>
+            </div>
+            <p class="member-bio-preview">
+              Ph.D. candidate at IIT Jammu. Holds M.Tech and B.Tech from CUSAT. Focuses on workflow scheduling, execution, and optimization across single and heterogeneous multi-cloud environments.
+            </p>
+          </div>
+          <div class="member-card-footer">
+            <div class="member-social-links">
+              <a href="mailto:alex.joseph@iitjammu.ac.in" class="member-social-icon" title="Email" aria-label="Email Alex Joseph"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/alex-joseph-kdmr" target="_blank" rel="noopener noreferrer" class="member-social-icon" title="LinkedIn" aria-label="Alex Joseph on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <button class="btn-view-bio">Full Bio <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Member 5: Ms. Pooja -->
+        <article class="member-card" data-category="phd" data-name="Ms. Pooja" data-role="Ph.D. Scholar (CSE)" data-tags="database systems learned index structures intelligent data management query processing machine learning" data-email="2023rcs1016@iitjammu.ac.in" data-full-bio="Pooja is a Ph.D. scholar at the Indian Institute of Technology (IIT) Jammu working in database systems and machine learning-based indexing techniques.
+
+Her research focuses on learned index structures and the integration of machine learning models to improve the efficiency and scalability of database indexing and query processing.
+
+She completed her M.Tech from the National Institute of Technology (NIT) Jalandhar with 74.6%, and her B.Tech from MJP Rohilkhand University, Bareilly with 74.5%. Her research interests include database systems, learned index structures, and intelligent data management.">
+          <div class="member-card-header">
+            <div class="member-avatar-wrapper">
+              <img src="assets/images/members/Pooja.jpg" alt="Ms. Pooja" class="member-avatar" loading="lazy">
+            </div>
+            <div class="member-header-info">
+              <h3 class="member-name">Ms. Pooja</h3>
+              <span class="member-role-badge">Ph.D. Scholar (CSE)</span>
+              <div class="member-affil"><i class="fa-solid fa-graduation-cap"></i> M.Tech, NIT Jalandhar</div>
+            </div>
+          </div>
+          <div class="member-card-body">
+            <div class="member-interests-heading">Research Highlights</div>
+            <div class="member-tags">
+              <span class="member-tag">Learned Indexes</span>
+              <span class="member-tag">Database Systems</span>
+              <span class="member-tag">Query Processing</span>
+            </div>
+            <p class="member-bio-preview">
+              Ph.D. scholar at IIT Jammu working on learned index structures and integrating machine learning models into database systems to dramatically accelerate query processing and storage efficiency.
+            </p>
+          </div>
+          <div class="member-card-footer">
+            <div class="member-social-links">
+              <a href="mailto:2023rcs1016@iitjammu.ac.in" class="member-social-icon" title="Email" aria-label="Email Pooja"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <button class="btn-view-bio">Full Bio <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Member 6: Ms. Priyanka Bogia -->
+        <article class="member-card" data-category="phd" data-name="Ms. Priyanka Bogia" data-role="Ph.D. Scholar (Electrical Engineering)" data-tags="renewable energy integration smart building energy management pv power forecasting sustainable energy systems" data-email="2024ree1028@iitjammu.ac.in" data-full-bio="Priyanka Bogia is currently pursuing a PhD in Electrical Engineering at the Indian Institute of Technology (IIT) Jammu.
+
+She completed her Bachelor of Technology (B.Tech.) in Electrical Engineering from Mahant Bachittar Singh College of Engineering and Technology, Jammu, and Master of Technology (M.Tech.) in Energy Systems and Management from the Central University of Haryana, India, in 2024.
+
+Her research interests include renewable energy integration, smart building energy management, photovoltaic (PV) power forecasting, and sustainable energy systems. Her work focuses on developing data-driven and optimization-based approaches to improve energy efficiency and enable intelligent energy management in smart infrastructures.">
+          <div class="member-card-header">
+            <div class="member-avatar-wrapper">
+              <img src="assets/images/members/PriyankaBogia.jpeg" alt="Ms. Priyanka Bogia" class="member-avatar" loading="lazy">
+            </div>
+            <div class="member-header-info">
+              <h3 class="member-name">Ms. Priyanka Bogia</h3>
+              <span class="member-role-badge">Ph.D. Scholar (EE)</span>
+              <div class="member-affil"><i class="fa-solid fa-bolt"></i> Energy Systems &amp; Management</div>
+            </div>
+          </div>
+          <div class="member-card-body">
+            <div class="member-interests-heading">Research Highlights</div>
+            <div class="member-tags">
+              <span class="member-tag">Smart Buildings</span>
+              <span class="member-tag">PV Forecasting</span>
+              <span class="member-tag">Renewable Energy</span>
+            </div>
+            <p class="member-bio-preview">
+              Ph.D. scholar in Electrical Engineering at IIT Jammu. Researches renewable energy integration, PV power forecasting, and optimization-based smart building energy management systems.
+            </p>
+          </div>
+          <div class="member-card-footer">
+            <div class="member-social-links">
+              <a href="mailto:2024ree1028@iitjammu.ac.in" class="member-social-icon" title="Email" aria-label="Email Priyanka Bogia"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <button class="btn-view-bio">Full Bio <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Member 7: Mr. Abhay Sharma -->
+        <article class="member-card" data-category="grad" data-name="Mr. Abhay Sharma" data-role="M.Tech Research Scholar (CSE 3-Yr)" data-tags="theoretical computer science signed graphs neutral edges mediation conflict zones discrete mathematics algorithms" data-email="2023pcr0045@iitjammu.ac.in" data-linkedin="https://www.linkedin.com/in/abhay-sharma-61b0461b4/" data-full-bio="Abhay Sharma is currently pursuing M.Tech CSE 3 years from IIT Jammu. His domain of interest in academics is mostly theoretical and he loves to do mathematical modelling and analysis. He is particularly interested in theoretical computer science subjects like Theory of computation, Discrete Mathematics, Algorithms and data structures.
+
+His research topic in post-graduation is finding copies of a subgraph in an undirected signed graph while ensuring output sensitivity of the algorithm. Besides this, he is also working on mediation in signed graphs with neutral edges, studying how we can efficiently find the maximum mediated conflict zone in a signed graph with neutral edges.
+
+Besides academics, he is interested in writing. He is mostly interested in writing Urdu ghazals and Hindi poems with occasional writing in English. He likes to read books, especially on philosophy and psychology. He is particularly interested in music and loves to sing and play musical instruments like keyboard, guitar and harmonium. In sports, he plays cricket and badminton.">
+          <div class="member-card-header">
+            <div class="member-avatar-wrapper">
+              <img src="assets/images/members/AbhaySharma.png" alt="Mr. Abhay Sharma" class="member-avatar" loading="lazy">
+            </div>
+            <div class="member-header-info">
+              <h3 class="member-name">Mr. Abhay Sharma</h3>
+              <span class="member-role-badge">M.Tech Scholar (3-Yr CSE)</span>
+              <div class="member-affil"><i class="fa-solid fa-square-root-variable"></i> Theoretical Computer Science</div>
+            </div>
+          </div>
+          <div class="member-card-body">
+            <div class="member-interests-heading">Research Highlights</div>
+            <div class="member-tags">
+              <span class="member-tag">Signed Graphs</span>
+              <span class="member-tag">Neutral Edges</span>
+              <span class="member-tag">Output Sensitivity</span>
+            </div>
+            <p class="member-bio-preview">
+              Specializing in mathematical modeling, theory of computation, and algorithms. Investigating output-sensitive subgraph matching and maximum mediated conflict zones in signed graphs with neutral edges.
+            </p>
+          </div>
+          <div class="member-card-footer">
+            <div class="member-social-links">
+              <a href="mailto:2023pcr0045@iitjammu.ac.in" class="member-social-icon" title="Email" aria-label="Email Abhay Sharma"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/abhay-sharma-61b0461b4/" target="_blank" rel="noopener noreferrer" class="member-social-icon" title="LinkedIn" aria-label="Abhay Sharma on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <button class="btn-view-bio">Full Bio <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Member 8: Mr. Swayam Gupta -->
+        <article class="member-card" data-category="grad" data-name="Mr. Swayam Gupta" data-role="Master's Researcher (CSE)" data-tags="isea cloud scheduling resource-aware security mobile environments backend data engineering" data-email="2024pcr0127@iitjammu.ac.in" data-full-bio="Hi, I'm Swayam! I'm currently a postgraduate student and Master's Researcher at IIT Jammu.
+
+My work is part of the ISEA government project, where I design workflow scheduling algorithms for secure cloud and mobile environments. I focus on building resource-aware schedulers that cut down on computational costs and latency while boosting security in critical systems.
+
+Before my master's, I worked as a Python Developer Trainee, getting hands-on experience building full-stack web apps and data extraction pipelines. I enjoy combining my background in backend development, data engineering, and machine learning to tackle complex scheduling challenges.">
+          <div class="member-card-header">
+            <div class="member-avatar-wrapper">
+              <img src="assets/images/members/SwayamGupta.jpeg" alt="Mr. Swayam Gupta" class="member-avatar" loading="lazy">
+            </div>
+            <div class="member-header-info">
+              <h3 class="member-name">Mr. Swayam Gupta</h3>
+              <span class="member-role-badge">Master's Researcher (CSE)</span>
+              <div class="member-affil"><i class="fa-solid fa-shield-halved"></i> ISEA Project Researcher</div>
+            </div>
+          </div>
+          <div class="member-card-body">
+            <div class="member-interests-heading">Research Highlights</div>
+            <div class="member-tags">
+              <span class="member-tag">Cloud Scheduling</span>
+              <span class="member-tag">ISEA Project</span>
+              <span class="member-tag">Data Engineering</span>
+            </div>
+            <p class="member-bio-preview">
+              Master's researcher working on the government-sponsored ISEA project. Designs resource-aware workflow scheduling algorithms for secure cloud and mobile environments, optimizing cost and latency.
+            </p>
+          </div>
+          <div class="member-card-footer">
+            <div class="member-social-links">
+              <a href="mailto:2024pcr0127@iitjammu.ac.in" class="member-social-icon" title="Email" aria-label="Email Swayam Gupta"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <button class="btn-view-bio">Full Bio <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Member 9: Mr. Rajat Prakash -->
+        <article class="member-card" data-category="grad" data-name="Mr. Rajat Prakash" data-role="M.Tech Research Assistant (CSE)" data-tags="multi-agent algorithms game theory distributed systems ex-microsoft iiit delhi" data-email="2024pcr0047@iitjammu.ac.in" data-linkedin="https://www.linkedin.com/in/rajatprakash127" data-webpage="https://rajat-prakash.vercel.app" data-full-bio="Rajat Prakash is currently pursuing a Master of Technology in Computer Science and Engineering at the Indian Institute of Technology (IIT) Jammu.
+
+Working as a Research Assistant, his primary research focuses on multi-agent algorithms.
+
+Prior to this, he earned his B.Tech in Computer Science and Engineering from IIIT Delhi and worked as a Software Engineer at Microsoft. Outside of his academic and research pursuits, Rajat enjoys poetry and sports.">
+          <div class="member-card-header">
+            <div class="member-avatar-wrapper">
+              <img src="assets/images/members/RajatPrakash.jpg" alt="Mr. Rajat Prakash" class="member-avatar" loading="lazy">
+            </div>
+            <div class="member-header-info">
+              <h3 class="member-name">Mr. Rajat Prakash</h3>
+              <span class="member-role-badge">M.Tech Research Assistant</span>
+              <div class="member-affil"><i class="fa-solid fa-briefcase"></i> Ex-Software Engineer, Microsoft</div>
+            </div>
+          </div>
+          <div class="member-card-body">
+            <div class="member-interests-heading">Research Highlights</div>
+            <div class="member-tags">
+              <span class="member-tag">Multi-Agent Algos</span>
+              <span class="member-tag">IIIT Delhi</span>
+              <span class="member-tag">Microsoft Alumni</span>
+            </div>
+            <p class="member-bio-preview">
+              M.Tech Research Assistant at IIT Jammu with primary research in multi-agent algorithms. Graduate of IIIT Delhi and former Software Engineer at Microsoft.
+            </p>
+          </div>
+          <div class="member-card-footer">
+            <div class="member-social-links">
+              <a href="mailto:2024pcr0047@iitjammu.ac.in" class="member-social-icon" title="Email" aria-label="Email Rajat Prakash"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://www.linkedin.com/in/rajatprakash127" target="_blank" rel="noopener noreferrer" class="member-social-icon" title="LinkedIn" aria-label="Rajat Prakash on LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://rajat-prakash.vercel.app" target="_blank" rel="noopener noreferrer" class="member-social-icon" title="Website" aria-label="Rajat Prakash Personal Website"><i class="fa-solid fa-globe"></i></a>
+            </div>
+            <button class="btn-view-bio">Full Bio <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <!-- Member 10: Ms. Aditi Anand -->
+        <article class="member-card" data-category="grad" data-name="Ms. Aditi Anand" data-role="B.Tech Researcher (CSE)" data-tags="reinforcement learning multi-agent systems optimization decision-making fairness scalability" data-email="2022ucs0076@iitjammu.ac.in" data-scholar="https://scholar.google.com/citations?user=NKu43TgAAAAJ&hl=en" data-full-bio="Aditi Anand is currently pursuing B.Tech. in Computer Science and Engineering at Indian Institute of Technology Jammu.
+
+Her research interests include reinforcement learning, multi-agent systems, and optimization.
+
+She works on designing efficient algorithms for decision-making in environments with multiple agents, with a focus on fairness and scalability.">
+          <div class="member-card-header">
+            <div class="member-avatar-wrapper">
+              <img src="assets/images/members/AditiAnand.jpg" alt="Ms. Aditi Anand" class="member-avatar" loading="lazy">
+            </div>
+            <div class="member-header-info">
+              <h3 class="member-name">Ms. Aditi Anand</h3>
+              <span class="member-role-badge">B.Tech Researcher (CSE)</span>
+              <div class="member-affil"><i class="fa-solid fa-graduation-cap"></i> Undergrad Scholar, IIT Jammu</div>
+            </div>
+          </div>
+          <div class="member-card-body">
+            <div class="member-interests-heading">Research Highlights</div>
+            <div class="member-tags">
+              <span class="member-tag">Reinforcement Learning</span>
+              <span class="member-tag">Multi-Agent Systems</span>
+              <span class="member-tag">Fairness</span>
+            </div>
+            <p class="member-bio-preview">
+              Undergraduate researcher in CSE at IIT Jammu. Designs efficient, fair, and scalable multi-agent decision-making algorithms and reinforcement learning models.
+            </p>
+          </div>
+          <div class="member-card-footer">
+            <div class="member-social-links">
+              <a href="mailto:2022ucs0076@iitjammu.ac.in" class="member-social-icon" title="Email" aria-label="Email Aditi Anand"><i class="fa-solid fa-envelope"></i></a>
+              <a href="https://scholar.google.com/citations?user=NKu43TgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="member-social-icon" title="Google Scholar" aria-label="Aditi Anand on Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+            </div>
+            <button class="btn-view-bio">Full Bio <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- No Results Found State -->
+      <div id="no-members-msg" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+        <i class="fa-solid fa-user-slash" style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--accent);"></i>
+        <h3>No matching team members found</h3>
+        <p>Try clearing your search or switching to "All Members".</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SELECTED PUBLICATIONS & RESEARCH HIGHLIGHTS
+       ========================================================================= -->
+  <section class="section" id="publications" style="background: var(--bg-surface-elevated);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fa-solid fa-scroll"></i> Scholarly Output
+        </div>
+        <h2 class="section-title">Selected Publications &amp; Highlights</h2>
+        <p class="section-desc">
+          Representative papers published in flagship AI and Computer Science venues by Dr. Suman Banerjee and GAN Lab members.
+        </p>
+      </div>
+
+      <div class="pub-list">
+
+        <!-- Publication 1: AAAI 2024 -->
+        <article class="pub-card">
+          <div class="pub-badge-year">
+            2024<br><small style="font-size: 0.7rem; letter-spacing: 1px;">AAAI</small>
+          </div>
+          <div class="pub-info">
+            <h3 class="pub-title">Efficient Algorithms for Regret Minimization in Billboard Advertisement</h3>
+            <div class="pub-authors">
+              Dildar Ali, Ankit Kumar Bhagat, <strong>Suman Banerjee</strong>, Yamuna Prasad
+            </div>
+            <div class="pub-venue">
+              <i class="fa-solid fa-award"></i> Proceedings of the AAAI Conference on Artificial Intelligence (AAAI-24)
+            </div>
+            <div class="pub-actions">
+              <button class="btn-pub" data-copy="@inproceedings{ali2024regret, title={Efficient Algorithms for Regret Minimization in Billboard Advertisement}, author={Ali, Dildar and Bhagat, Ankit Kumar and Banerjee, Suman and Prasad, Yamuna}, booktitle={Proceedings of the AAAI Conference on Artificial Intelligence}, year={2024}}" data-copy-label="BibTeX Citation">
+                <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+              </button>
+              <a href="https://scholar.google.com/citations?user=mUpLGpsAAAAJ" target="_blank" rel="noopener noreferrer" class="btn-pub">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Google Scholar
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Publication 2: DEXA -->
+        <article class="pub-card">
+          <div class="pub-badge-year">
+            2023<br><small style="font-size: 0.7rem; letter-spacing: 1px;">DEXA</small>
+          </div>
+          <div class="pub-info">
+            <h3 class="pub-title">Group Trip Planning Query Problem with Multimodal Journey</h3>
+            <div class="pub-authors">
+              Dildar Ali, Yamuna Prasad, <strong>Suman Banerjee</strong>
+            </div>
+            <div class="pub-venue">
+              <i class="fa-solid fa-book"></i> International Conference on Database and Expert Systems Applications (DEXA)
+            </div>
+            <div class="pub-actions">
+              <button class="btn-pub" data-copy="@inproceedings{ali2023multimodal, title={Group Trip Planning Query Problem with Multimodal Journey}, author={Ali, Dildar and Prasad, Yamuna and Banerjee, Suman}, booktitle={International Conference on Database and Expert Systems Applications}, year={2023}}" data-copy-label="BibTeX Citation">
+                <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+              </button>
+              <a href="https://scholar.google.com/citations?user=mUpLGpsAAAAJ" target="_blank" rel="noopener noreferrer" class="btn-pub">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Google Scholar
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Publication 3: Theoretical Computer Science -->
+        <article class="pub-card">
+          <div class="pub-badge-year">
+            2022<br><small style="font-size: 0.7rem; letter-spacing: 1px;">TCS</small>
+          </div>
+          <div class="pub-info">
+            <h3 class="pub-title">Parameterized Algorithms and Structural Analysis for Influence Maximization</h3>
+            <div class="pub-authors">
+              <strong>Suman Banerjee</strong>, et al.
+            </div>
+            <div class="pub-venue">
+              <i class="fa-solid fa-file-lines"></i> Theoretical Computer Science / Theory of Computing Systems
+            </div>
+            <div class="pub-actions">
+              <button class="btn-pub" data-copy="@article{banerjee2022parameterized, title={Parameterized Algorithms and Structural Analysis for Influence Maximization}, author={Banerjee, Suman}, journal={Theoretical Computer Science}, year={2022}}" data-copy-label="BibTeX Citation">
+                <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+              </button>
+              <a href="https://scholar.google.com/citations?user=mUpLGpsAAAAJ" target="_blank" rel="noopener noreferrer" class="btn-pub">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Google Scholar
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Publication 4: Cloud Scheduling -->
+        <article class="pub-card">
+          <div class="pub-badge-year">
+            2024<br><small style="font-size: 0.7rem; letter-spacing: 1px;">CLOUD</small>
+          </div>
+          <div class="pub-info">
+            <h3 class="pub-title">Budget-Aware and Latency-Optimal Workflow Scheduling in Multi-Cloud Infrastructures</h3>
+            <div class="pub-authors">
+              Alex Joseph, Swayam Gupta, <strong>Suman Banerjee</strong>
+            </div>
+            <div class="pub-venue">
+              <i class="fa-solid fa-network-wired"></i> IEEE / ACM Distributed Systems &amp; Cloud Computing Conference
+            </div>
+            <div class="pub-actions">
+              <button class="btn-pub" data-copy="@article{joseph2024cloud, title={Budget-Aware and Latency-Optimal Workflow Scheduling in Multi-Cloud Infrastructures}, author={Joseph, Alex and Gupta, Swayam and Banerjee, Suman}, journal={Distributed Computing and Cloud Systems}, year={2024}}" data-copy-label="BibTeX Citation">
+                <i class="fa-solid fa-quote-right"></i> Copy BibTeX
+              </button>
+              <a href="https://scholar.google.com/citations?user=mUpLGpsAAAAJ" target="_blank" rel="noopener noreferrer" class="btn-pub">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Google Scholar
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="https://scholar.google.com/citations?user=mUpLGpsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <i class="fa-solid fa-graduation-cap"></i> View All 60+ Publications on Google Scholar
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SPONSORED PROJECTS & GRANTS
+       ========================================================================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fa-solid fa-handshake-angle"></i> Grants &amp; Projects
+        </div>
+        <h2 class="section-title">Sponsored Research Initiatives</h2>
+        <p class="section-desc">
+          Funded programs focused on national digital infrastructure security, algorithmic optimization, and computational data processing.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-badge">
+            <i class="fa-solid fa-shield-virus"></i> National Security Project
+          </div>
+          <h3 class="project-title">ISEA Project: Secure Cloud &amp; Mobile Workflow Scheduling</h3>
+          <p class="project-desc">
+            As part of the Government of India's Information Security Education and Awareness (ISEA) initiative, GAN Lab designs resource-aware schedulers that drastically reduce computational latency and operational overhead while strictly safeguarding data confidentiality in distributed cloud and edge environments.
+          </p>
+          <div class="project-meta">
+            <span><strong>Principal Focus:</strong> Cloud Security &amp; Scheduling</span>
+            <span><strong>Status:</strong> Active</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-badge">
+            <i class="fa-solid fa-chart-line"></i> Sponsored Algorithmic Project
+          </div>
+          <h3 class="project-title">Regret Minimization &amp; Fairness in Advertisement Slot Allocation</h3>
+          <p class="project-desc">
+            Developing mathematically provable, submodular optimization algorithms to balance advertiser utility, user attention metrics, and fairness in offline billboard placement and dynamic social advertising platforms.
+          </p>
+          <div class="project-meta">
+            <span><strong>Principal Focus:</strong> Submodular Optimization</span>
+            <span><strong>Status:</strong> Active</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       JOIN US / OPPORTUNITIES (From About Lab.docx)
+       ========================================================================= -->
+  <section class="section" id="join">
+    <div class="container">
+      <div class="join-banner">
+        <div class="join-content">
+          <div class="section-badge" style="background: var(--bg-surface); margin-bottom: 0.75rem;">
+            <i class="fa-solid fa-user-plus"></i> Prospective Researchers
+          </div>
+          <h3>Join the GAN Lab Group</h3>
+          <p>
+            If computer science and mathematics make you feel excited, do consider joining us! We are always looking for passionate people across diverse career stages to collaborate, innovate, and contribute to cutting-edge research in algorithms, graph theory, data management, and optimization.
+          </p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="mailto:suman.banerjee@iitjammu.ac.in?subject=Prospective%20Researcher%20Inquiry%20-%20GAN%20Lab" class="btn btn-primary">
+              <i class="fa-solid fa-paper-plane"></i> Contact Dr. Suman Banerjee
+            </a>
+            <a href="https://iitjammu.ac.in/computer-science-and-engineering" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <i class="fa-solid fa-building-columns"></i> CSE Dept Webpage
+            </a>
+          </div>
+        </div>
+
+        <!-- Distinct Career Categories as detailed in About Lab.docx -->
+        <div class="join-roles">
+          <div class="role-box">
+            <div class="role-icon"><i class="fa-solid fa-user-graduate"></i></div>
+            <div class="role-info">
+              <h4>Doctoral Scholars (Ph.D.)</h4>
+              <p>Rigorous mathematical foundations and high-impact publications.</p>
+            </div>
+          </div>
+          <div class="role-box">
+            <div class="role-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="role-info">
+              <h4>Graduate Students (M.Tech / M.S.)</h4>
+              <p>Work on funded initiatives like ISEA or combinatorial optimization.</p>
+            </div>
+          </div>
+          <div class="role-box">
+            <div class="role-icon"><i class="fa-solid fa-microscope"></i></div>
+            <div class="role-info">
+              <h4>Postdoctoral Fellows</h4>
+              <p>Independent research, mentorship, and international collaborations.</p>
+            </div>
+          </div>
+          <div class="role-box">
+            <div class="role-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="role-info">
+              <h4>Young International Faculty &amp; Visiting Scholars</h4>
+              <p>Short-term and long-term academic visits, research exchange, and seminars.</p>
+            </div>
+          </div>
+          <div class="role-box">
+            <div class="role-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <div class="role-info">
+              <h4>Regular Faculty Members &amp; Collaborators</h4>
+              <p>Joint research proposals, interdisciplinary projects, and co-supervision.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CONTACT & LOCATION
+       ========================================================================= -->
+  <section class="section" id="contact" style="background: var(--bg-surface-elevated);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">
+          <i class="fa-solid fa-location-dot"></i> Connect
+        </div>
+        <h2 class="section-title">Visit &amp; Contact Us</h2>
+        <p class="section-desc">
+          Located in the picturesque foothills of the Himalayas at the state-of-the-art IIT Jammu Jagti Campus.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Details -->
+        <div class="contact-card">
+          <h3 class="contact-card-title">
+            <i class="fa-solid fa-address-card"></i> Laboratory Information
+          </h3>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-door-open"></i>
+            </div>
+            <div class="contact-detail">
+              <h4>Laboratory Headquarters</h4>
+              <p><strong>GAN Lab (Room 4011)</strong><br>Department of Computer Science &amp; Engineering<br>Indian Institute of Technology Jammu</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div class="contact-detail">
+              <h4>Campus Address</h4>
+              <p>IIT Jammu, Jagti, NH-44, PO Nagrota, Jammu - 181221, Jammu and Kashmir, India</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-detail">
+              <h4>Primary Inquiries</h4>
+              <p><a href="mailto:suman.banerjee@iitjammu.ac.in">suman.banerjee@iitjammu.ac.in</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="contact-detail">
+              <h4>Department Website</h4>
+              <p><a href="https://iitjammu.ac.in/computer-science-and-engineering" target="_blank" rel="noopener noreferrer">https://iitjammu.ac.in/computer-science-and-engineering</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Campus Location Card -->
+        <div class="contact-card" style="display: flex; flex-direction: column;">
+          <h3 class="contact-card-title">
+            <i class="fa-solid fa-compass"></i> IIT Jammu Campus
+          </h3>
+          <div class="map-placeholder">
+            <i class="fa-solid fa-mountain-sun"></i>
+            <h4 style="font-family: var(--font-heading); font-size: 1.2rem; margin-bottom: 0.5rem;">Indian Institute of Technology Jammu</h4>
+            <p style="color: var(--text-secondary); max-width: 380px; font-size: 0.95rem; margin-bottom: 1.5rem;">
+              Jagti Campus, National Highway 44, Nagrota, Jammu, J&amp;K 181221
+            </p>
+            <a href="https://maps.google.com/?q=IIT+Jammu+Jagti" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size: 0.875rem;">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1rem;">
+            <img src="assets/images/gan-logo.png" alt="GAN Lab Logo" style="width: 52px; height: 52px; border-radius: 50%; border: 1.5px solid var(--border-highlight); box-shadow: 0 0 14px var(--primary-glow);">
+            <div>
+              <div style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 800; line-height: 1.1;">GAN <span class="gradient-text">LAB</span></div>
+              <div style="font-size: 0.725rem; font-weight: 600; color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase;">Graph, Algorithm &amp; Network Lab</div>
+            </div>
+          </div>
+          <p>
+            <strong>GAN Lab (Room 4011)</strong> is dedicated to cutting-edge research in data management, graph theory, algorithmic optimization, learned indexes, and cloud computing at IIT Jammu.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About GAN Lab</a></li>
+            <li><a href="#research">Research Focus</a></li>
+            <li><a href="#pi">Dr. Suman Banerjee</a></li>
+            <li><a href="#team">Team Members</a></li>
+            <li><a href="#publications">Publications</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Affiliations</h4>
+          <ul class="footer-links">
+            <li><a href="https://iitjammu.ac.in" target="_blank" rel="noopener noreferrer">IIT Jammu Official</a></li>
+            <li><a href="https://iitjammu.ac.in/computer-science-and-engineering" target="_blank" rel="noopener noreferrer">Department of CSE</a></li>
+            <li><a href="https://scholar.google.com/citations?user=mUpLGpsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar Profile</a></li>
+            <li><a href="#join">Opportunities &amp; Admissions</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> GAN Lab (Graph, Algorithm, and Network Lab) • Room 4011, Department of Computer Science and Engineering, IIT Jammu. All rights reserved.
+        </div>
+        <button id="back-to-top" class="back-to-top-btn" title="Back to Top" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MEMBER DETAILED BIO MODAL
+       ========================================================================= -->
+  <div id="bio-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-header">
+        <img id="modal-avatar" src="" alt="Researcher Photo" class="modal-avatar">
+        <div class="modal-title-wrap">
+          <h3 id="modal-name"></h3>
+          <div id="modal-role" class="modal-role"></div>
+        </div>
+      </div>
+
+      <div id="modal-bio-text" class="modal-bio-full"></div>
+
+      <div id="modal-links-container" class="modal-links"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="site-toast" class="toast" role="alert" aria-live="assertive">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toast-message"></span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Dynamic year update
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
